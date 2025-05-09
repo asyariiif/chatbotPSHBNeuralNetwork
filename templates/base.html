@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/bootstrap.css') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>PPSHB MATIQ ISY KARIMA</title>
+  </head>
+  <body>
+     <!-- awal code navbar/menu -->
+    <nav class="navbar py-4 navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="{{ url_for('static', filename='images/logorb.png') }}"
+            width="100"
+            alt=""
+          />
+          <span class="ml-2" style="font-family: Poppins, sans-serif; font-size: 16px; font-weight: bold" >MATIQ ISY KARIMA</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active align-self-center">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="#">Customers</a>
+            </li>
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="#">About us</a>
+            </li>
+            <a class="btn px-4 btn-secondary ml-5" href="#" role="button"
+              >Sign In</a
+            >
+            <a class="btn px-4 btn-primary ml-2" href="#" role="button"
+              >Sign Up</a
+            >
+          </ul>
+        </div>
+      </div>
+    </nav>
+     <!-- akhir code navbar/menu -->
+    
+   <!-- awal code hero -->
+    <section class="herobwa mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col align-self-center">
+            <h1 class="mb-4">Penerimaan Santri Huffazh Baru</h1>
+            <p class="mb-4">
+              Segera bergabung menjadi generasi hafizh, berjiwa da’i, berakhlak mulia dan berprestasi, menyambut 100 tahun kebangkitan Islam.
+            </p>
+            <a class="btn btn-primary" href="#" role="button">Daftar Sekarang</a>
+          </div>
+          <div class="col d-none d-sm-block">
+            <img
+              width="500"
+              src="{{ url_for('static', filename='images/images1.png') }}"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+       <!-- akhir code hero -->
+      
+      <!-- awal code chatboot -->
+      <div class="container">
+        <div class="chatbox">
+          <div class="chatbox__support">
+            <div class="chatbox__header">
+              <div class="chatbox__image--header">
+                <img
+                  src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-customer-gamification-flaticons-lineal-color-flat-icons.png"
+                  alt="image"
+                />
+              </div>
+              <div class="chatbox__content--header">
+                <h4 class="chatbox__heading--header">MATIQBOT</h4>
+                <h5 class="chatbox__description--header">
+                  Hi. Nama saya Matiq Ada yang bisa ku bantu?
+                </h5>
+              </div>
+            </div>
+            <div class="chatbox__messages">
+              <div></div>
+            </div>
+            <div class="chatbox__footer">
+              <input type="text" placeholder="Write a message..." />
+              <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+          </div>
+          <div class="chatbox__button">
+            <button>
+              <img
+                src="{{ url_for('static', filename='images/question.gif') }}"
+                width="45"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+       <!-- akhir code chatboot -->
+    </section>
+
+    <script type="text/javascript">
+      var SCRIPT_ROOT = "{{ request.script_root|tojson|safe }}";
+    </script>
+        
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='app.js') }}"
+    ></script>
+  </body>
+</html>
